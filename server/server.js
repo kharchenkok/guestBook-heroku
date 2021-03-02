@@ -40,7 +40,7 @@ export class ContactsServer {
 this.server.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../build', 'index.html'));
 });
-    this.server.use("/messages/messages", messagesRouters);
+    this.server.use("/messages", messagesRouters);
     
   }
 
