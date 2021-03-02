@@ -38,21 +38,6 @@ async function messagesList(req, res) {
     console.error("there was an error:", error.message);
   }
 }
-//   async function addContact(req,res) {
-//   try {
-//     const contactsData = await fs.readFile(messagePath, "utf-8");
-//     const id = uuidv4();
-//     const parsedContactsData = JSON.parse(contactsData)
-//     const newContact = { id, ...req.body};
-//     const newContactsData = [...parsedContactsData, newContact];
-//     await fs.writeFile(messagePath, JSON.stringify(newContactsData,null,2),"utf-8");
-//     return res.status(201).send(newContactsData);
-//   } catch (error) {
-//     console.error("there was an error:", error.message);
-//   }
-// }
-
-
 
 export { messagesList,addMessage,createMessageSchema}
-// export { messagesList, addContact,createMessageSchema}
+

@@ -3,14 +3,10 @@ import dotenv from "dotenv";
 import path from "path";
 import morgan from "morgan";
 import cors from "cors";
-// import { contactsController } from "./contacts/contacts.controller.js";
 import { getPaths } from "./helpers/utils.js"
 import { messagesRouters } from "./messages/messages.controller.js";
-import proxy from'http-proxy-middleware'
 
 const { __dirname } = getPaths(import.meta.url);
-
-
 
 export class ContactsServer {
   constructor() {
@@ -30,18 +26,14 @@ export class ContactsServer {
     this.server = express();
   }
   initConfig() {
-
-    
     dotenv.config({ path: path.join(__dirname, "../.env") });
-    
   }
   initMiddlewares() {
-    
     this.server.use(express.json());
     this.server.use(cors());
     this.server.use(morgan("combined"));
-    this.server.use(proxy(['/api' ], { target: 'http://localhost:2000' }));
     this.server.use(express.static(path.join(__dirname, '../build')))
+
   }
 
   initRoutes() {
