@@ -1,0 +1,30 @@
+{
+  "name": "guest-book-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kharchenkok/guest-book-node.git"
+  },
+  "keywords": [],
+  "author": "KharchenkoK <k.v.kharchenko@ukr.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kharchenkok/guest-book-node/issues"
+  },
+  "homepage": "https://github.com/kharchenkok/guest-book-node#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "morgan": "^1.10.0",
+    "uuid": "^8.3.2"
+  }
+}
